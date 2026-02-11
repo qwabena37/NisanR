@@ -44,7 +44,7 @@ export default function Navbar() {
           {/* Logo */}
           <NavLink
             to="/"
-            className="flex items-center gap-2 text-2xl font-bold text-blue-600"
+            className="flex items-center gap-2 text-2xl font-bold text-blue-900"
           >
             <FaBuilding />
             Nisan<span className="text-gray-800">Realty</span>
@@ -52,16 +52,16 @@ export default function Navbar() {
 
           {/* Social Icons - Desktop */}
           <div className="hidden md:flex items-center gap-6">
-            <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-black transition hover:scale-110">
+            <a href="https://www.tiktok.com/@nisanrealty123?_r=1&_t=ZS-93pj6cgN2n7/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-black transition hover:scale-110">
               <FaTiktok size={18} />
             </a>
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition hover:scale-110">
+            <a href="https://www.facebook.com/share/1H3wWbyGWz/?mibextid=wwXIfr/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition hover:scale-110">
               <FaFacebookF size={18} />
             </a>
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-pink-500 transition hover:scale-110">
+            <a href="https://www.instagram.com/nisan.realty123?igsh=MTAzc2V3MGhoOWR2Mg==/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-pink-500 transition hover:scale-110">
               <FaInstagram size={18} />
             </a>
-            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-red-600 transition hover:scale-110">
+            <a href="https://youtube.com/@nisan_realty?si=0Al1n6l-MNxRdjbw/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-red-600 transition hover:scale-110">
               <FaYoutube size={18} />
             </a>
           </div>

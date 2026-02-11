@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-10">
+    <div className="max-w-7xl bg-gray-50 mx-auto px-4 py-10">
       
       {/* Page Header */}
       <div className="text-center mb-10">
@@ -33,6 +33,8 @@ export default function Contact() {
               Contact Details
             </h2>
             <p className="text-gray-600">
+              📞 +233 20 302 0239 <br />
+              📞 +233 20 302 0239 <br />
               📞 +233 20 302 0239 <br />
               📧 Email: info@nisanrealty.com
             </p>
@@ -76,7 +78,7 @@ export default function Contact() {
 
             <button
               type="button"
-              className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition"
+              className="w-full bg-gray-800 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition"
             >
               Send Message
             </button>

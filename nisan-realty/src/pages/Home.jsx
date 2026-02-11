@@ -25,7 +25,7 @@ const propertiesData = [
     location: "Adenta",
     price: 800000,
     listingType: "sale",
-    status: "available",
+    status: "sold",
     image: "https://images.unsplash.com/photo-1613977257363-707ba9348227",
   },
   {
@@ -37,7 +37,7 @@ const propertiesData = [
     status: "available",
     image: "https://images.unsplash.com/photo-1600047509358-9dc75507daeb",
   },
-    {
+  {
     id: 5,
     title: "Big and Bold",
     location: "Franko Estate",
@@ -52,8 +52,36 @@ const propertiesData = [
     location: "Tema",
     price: 2500,
     listingType: "rent",
-    status: "available",
+    status: "occupied",
     image: "https://images.unsplash.com/photo-1600047509358-9dc75507daeb",
+  },
+  // Land Properties
+  {
+    id: 7,
+    title: "Prime Land Plot",
+    location: "Spintex",
+    price: 120000,
+    listingType: "sale",
+    status: "available",
+    image: "https://images.unsplash.com/photo-1599423300746-b62533397364",
+  },
+  {
+    id: 8,
+    title: "Lakeside Land",
+    location: "Weija",
+    price: 95000,
+    listingType: "sale",
+    status: "available",
+    image: "https://images.unsplash.com/photo-1560185007-cde436f6a4d0",
+  },
+  {
+    id: 9,
+    title: "Hillside Land Plot",
+    location: "Aburi",
+    price: 150000,
+    listingType: "sale",
+    status: "sold",
+    image: "https://images.unsplash.com/photo-1507089947368-19c1da9775ae",
   },
 ];
 
@@ -78,10 +106,10 @@ export default function Home() {
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-r from-black via-gray-900 to-black">
         <h1 className="text-5xl font-bold text-yellow-500 tracking-wide">
-          Luxury Living Redefined
+          Luxury Living & Land Sales
         </h1>
         <p className="mt-4 text-gray-300">
-          Discover exclusive properties with NisanRealty
+          Discover exclusive properties and prime land plots with NisanRealty
         </p>
       </section>
 
@@ -95,10 +123,14 @@ export default function Home() {
             className="bg-gray-800 p-3 rounded text-white"
           >
             <option value="">All Locations</option>
-            <option value="Accra">Accra</option>
-            <option value="Kumasi">Kumasi</option>
             <option value="Tema">Tema</option>
-            <option value="Cape Coast">Cape Coast</option>
+            <option value="Shiashie">Shiashie</option>
+            <option value="East Legon">East Legon</option>
+            <option value="Adenta">Adenta</option>
+            <option value="Spintex">Spintex</option>
+            <option value="Weija">Weija</option>
+            <option value="Aburi">Aburi</option>
+            <option value="Franko Estate">Franko Estate</option>
           </select>
 
           {/* Max Price */}
@@ -128,6 +160,7 @@ export default function Home() {
             <option value="available">Available</option>
             <option value="sold">Sold</option>
             <option value="rented">Rented</option>
+            <option value="occupied">Occupied</option>
           </select>
 
         </div>
@@ -157,8 +190,8 @@ export default function Home() {
                 <div className="flex justify-between items-center mt-4">
                   <span className="text-lg font-semibold">
                     {property.listingType === "sale"
-                      ? `$${property.price.toLocaleString()}`
-                      : `$${property.price.toLocaleString()} / month`}
+                      ? `GHS${property.price.toLocaleString()}`
+                      : `GHS${property.price.toLocaleString()} / month`}
                   </span>
 
                   <span
@@ -175,9 +208,7 @@ export default function Home() {
                 </div>
 
                 <p className="mt-3 text-sm text-blue-400 capitalize">
-                  {property.listingType === "sale"
-                    ? "For Sale"
-                    : "For Rent"}
+                  {property.listingType === "sale" ? "For Sale" : "For Rent"}
                 </p>
               </div>
             </div>
