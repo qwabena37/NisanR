@@ -1,14 +1,14 @@
 export default function Contact() {
   return (
-    <div className="max-w-7xl bg-gray-50 mx-auto px-4 py-10">
+    <div className="min-h-screen bg-gray-950 text-white py-16 px-6">
       
       {/* Page Header */}
       <div className="text-center mb-10">
-        <h1 className="text-3xl font-bold text-gray-800">
+        <h1 className="text-4xl font-bold text-yellow-500 mb-12 text-center">
           Contact Us
         </h1>
-        <p className="text-gray-600 mt-2">
-          We’d love to hear from you. Reach out anytime.
+        <p className="text-yellow-400">
+          We’d love to help you find that dream home and own that land with pride. Reach out anytime.
         </p>
       </div>
 
@@ -17,22 +17,22 @@ export default function Contact() {
         
         {/* Contact Information */}
         <div className="space-y-6">
-          <div className="bg-white p-6 rounded-xl shadow">
-            <h2 className="text-xl font-semibold mb-2">
+          <div className="bg-gray-950 p-6 rounded-xl shadow">
+            <h2 className="text-xl font-bold text-yellow-500 font-semibold mb-2">
               Our Office
             </h2>
-            <p className="text-gray-600">
+            <p className="text-white">
               Nisan Realty<br />
               Spintex, Accra<br />
               Ghana
             </p>
           </div>
 
-          <div className="bg-white p-6 rounded-xl shadow">
-            <h2 className="text-xl font-semibold mb-2">
+          <div className=" p-6 rounded-xl shadow">
+            <h2 className="text-xl font-bold text-yellow-500 font-semibold mb-2">
               Contact Details
             </h2>
-            <p className="text-gray-600">
+            <p className="text-white">
               📞 +233 20 302 0239 <br />
               📞 +233 20 302 0239 <br />
               📞 +233 20 302 0239 <br />
@@ -40,11 +40,11 @@ export default function Contact() {
             </p>
           </div>
 
-          <div className="bg-white p-6 rounded-xl shadow">
-            <h2 className="text-xl font-semibold mb-2">
+          <div className=" p-6 rounded-xl shadow">
+            <h2 className="text-xl font-bold text-yellow-500 font-semibold mb-2">
               Business Hours
             </h2>
-            <p className="text-gray-600">
+            <p className="text-white">
               Monday – Friday: 8:00 AM – 6:00 PM <br />
               Saturday: 9:00 AM – 3:00 PM
             </p>
@@ -52,8 +52,8 @@ export default function Contact() {
         </div>
 
         {/* Contact Form */}
-        <div className="bg-white p-6 rounded-xl shadow">
-          <h2 className="text-xl font-semibold mb-4">
+        <div className="p-6 rounded-xl shadow">
+          <h2 className="text-xl text-yellow-500 font-semibold mb-4">
             Send Us a Message
           </h2>
 
@@ -78,7 +78,7 @@ export default function Contact() {
 
             <button
               type="button"
-              className="w-full bg-gray-800 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition"
+              className="w-full text-yellow-500 text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition"
             >
               Send Message
             </button>

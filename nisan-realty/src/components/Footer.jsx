@@ -21,7 +21,7 @@ export default function Footer() {
 
         {/* Quick Links */}
         <div>
-          <h4 className="font-semibold mb-3">Quick Links</h4>
+          <h4 className="font-semibold text-yellow-500 mb-3">Quick Links</h4>
           <ul className="space-y-2">
             <li>
               <NavLink to="/" className={linkStyle}>Home</NavLink>
@@ -43,7 +43,7 @@ export default function Footer() {
 
         {/* Locations */}
         <div>
-          <h4 className="font-semibold mb-3">Our Locations</h4>
+          <h4 className="font-semibold text-yellow-500 mb-3">Our Locations</h4>
           <ul className="space-y-2 text-gray-400">
             <li>Accra</li>
             <li>Kumasi</li>
@@ -55,7 +55,7 @@ export default function Footer() {
 
         {/* Contact Info */}
         <div>
-          <h4 className="font-semibold mb-3">Contact</h4>
+          <h4 className="font-semibold text-yellow-500 mb-3">Contact</h4>
           <p className="text-gray-400">info@nisanrealty.com</p>
           <p className="text-gray-400">+233 123 456 789</p>
           <p className="text-gray-400 mt-2">Accra, Ghana</p>
