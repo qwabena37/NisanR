@@ -189,18 +189,23 @@ export default function Home() {
     <div className="bg-gray-950 min-h-screen text-white">
 
       {/* HERO */}
-      <section className="text-center py-20 bg-gradient-to-r from-black via-gray-900 to-black">
-        <h1 className="text-5xl font-bold text-yellow-500">
-          Luxury Living | Land Sales | Resorts
-        </h1>
-        <p className="mt-6 text-gray-300 max-w-2xl mx-auto leading-relaxed text-lg">
-  Discover exclusive properties with NisanRealty — where luxury, comfort and strategic investment opportunities come together to create exceptional living experiences.
+      <section className="text-center py-20 bg-gradient-to-r from-black via-gray-900 to-black overflow-hidden">
+  <h1 className="font-bold text-yellow-500 whitespace-nowrap text-[clamp(1.5rem,5vw,3rem)]">
+    Luxury Living | Land Sales | Resorts
+  </h1>
+
+  <p className="mt-6 text-gray-300 mx-auto leading-relaxed text-center 
+               text-[clamp(0.9rem,3vw,1.125rem)] 
+               max-w-3xl px-4 break-words">
+  Discover exclusive properties with NisanRealty — where luxury, comfort and 
+  strategic investment opportunities come together to create exceptional 
+  living experiences.
 </p>
 
-<p className="mt-4 text-yellow-500 font-semibold tracking-wide text-lg">
-  Your Dream . Our Dream
-</p>
-      </section>
+  <p className="mt-4 text-yellow-500 font-semibold tracking-wide whitespace-nowrap text-[clamp(0.9rem,2.5vw,1.125rem)]">
+    Your Dream . Our Dream
+  </p>
+</section>
 
       {/* VIDEO SECTION - Apartments Promo */}
       <section className="relative h-[70vh] w-full overflow-hidden">
@@ -221,7 +226,8 @@ export default function Home() {
 
         <div className="relative z-10 h-full flex flex-col justify-center items-center text-center px-6">
           <h2 className="text-4xl md:text-5xl font-bold text-yellow-500">
-            Discover Luxury Apartments
+            <a href="/gallery">Discover Luxury Apartments</a>
+            
           </h2>
 
           <p className="mt-4 max-w-2xl text-gray-200">
