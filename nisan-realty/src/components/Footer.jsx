@@ -10,7 +10,7 @@ export default function Footer() {
         
         {/* Company Info */}
         <div>
-          <h3 className="text-xl font-bold mb-4 text-blue-500">
+          <h3 className="text-xl font-bold mb-4 text-yellow-500">
             NisanRealty
           </h3>
           <p className="text-gray-400">

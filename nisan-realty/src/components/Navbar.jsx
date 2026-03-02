@@ -21,8 +21,8 @@ export default function Navbar() {
 
   const linkClass = ({ isActive }) =>
     isActive
-      ? "text-blue-600 font-semibold"
-      : "text-gray-700 hover:text-blue-600 transition";
+      ? "text-yellow-500 font-semibold"
+      : "text-gray-700 hover:text-yellow-500 transition";
 
   return (
     <header className="sticky top-0 z-50 shadow">
@@ -44,7 +44,7 @@ export default function Navbar() {
           {/* Logo */}
           <NavLink
             to="/"
-            className="flex items-center gap-2 text-2xl font-bold text-blue-900"
+            className="flex items-center gap-2 text-2xl font-bold text-yellow-500"
           >
             <FaBuilding />
             Nisan<span className="text-gray-800">Realty</span>
@@ -71,7 +71,7 @@ export default function Navbar() {
             <NavLink to="/" className={linkClass}>Home</NavLink>
             <NavLink to="/about" className={linkClass}>About Us</NavLink>
             <NavLink to="/locations" className={linkClass}>Locations</NavLink>
-            <NavLink to="/gallery" className={linkClass}>Gallery</NavLink>
+            <NavLink to="/gallery" className={linkClass}>Our Properties</NavLink>
             <NavLink to="/contact" className={linkClass}>Contact Us</NavLink>
           </ul>
 
@@ -91,7 +91,7 @@ export default function Navbar() {
             <NavLink to="/" className={linkClass} onClick={() => setMenuOpen(false)}>Home</NavLink>
             <NavLink to="/about" className={linkClass} onClick={() => setMenuOpen(false)}>About Us</NavLink>
             <NavLink to="/locations" className={linkClass} onClick={() => setMenuOpen(false)}>Locations</NavLink>
-            <NavLink to="/gallery" className={linkClass} onClick={() => setMenuOpen(false)}>Gallery</NavLink>
+            <NavLink to="/gallery" className={linkClass} onClick={() => setMenuOpen(false)}>Our Properties</NavLink>
             <NavLink to="/contact" className={linkClass} onClick={() => setMenuOpen(false)}>Contact Us</NavLink>
 
             {/* Social Icons - Mobile */}
