@@ -27,7 +27,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 shadow">
       {/* Date & Time */}
-      <div className="bg-gray-900 text-white text-sm py-2 text-center">
+      <div className="bg-gray-900 text-yellow-500 text-sm py-2 text-center">
         {dateTime.toLocaleDateString("en-GB", {
           weekday: "long",
           year: "numeric",

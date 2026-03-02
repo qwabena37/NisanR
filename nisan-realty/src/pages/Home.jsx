@@ -89,7 +89,7 @@ export default function Home() {
       id: 7,
       title: "Big Blue Resort",
       location: "Kasoa",
-      price: 1500000,
+      price: 150000,
       listingType: "sale",
       status: "available",
       category: "resort",
@@ -103,7 +103,7 @@ export default function Home() {
       id: 8,
       title: "Manko Resort",
       location: "Kasoa",
-      price: 1500000,
+      price: 150000,
       listingType: "sale",
       status: "available",
       category: "resort",
@@ -198,7 +198,7 @@ export default function Home() {
 </p>
 
 <p className="mt-4 text-yellow-500 font-semibold tracking-wide text-lg">
-  Your Dream. Our Dream.
+  Your Dream . Our Dream
 </p>
       </section>
 
