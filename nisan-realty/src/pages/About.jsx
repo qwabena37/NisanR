@@ -34,10 +34,10 @@ export default function About() {
         <div className="flex flex-col justify-between h-full space-y-6">
           
           <div>
-            <h2 className="text-2xl font-bold text-yellow-500 mb-2">
+            <h2 className="text-2xl font-bold text-yellow-500">
               Our History
             </h2>
-            <p className="text-gray-300 text-xl leading-relaxed">
+            <p className="text-gray-300 text-2xl leading-relaxed">
               Nisan Realty was founded with a commitment to delivering trusted
               and premium real estate solutions. Over the years, we have built
               a reputation for excellence, integrity and customer satisfaction
@@ -46,20 +46,20 @@ export default function About() {
           </div>
 
           <div>
-            <h2 className="text-2xl font-bold text-yellow-500 mb-2">
+            <h2 className="text-2xl font-bold text-yellow-500">
               Our Vision
             </h2>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-gray-300 text-2xl leading-relaxed">
               To become a leading real estate brand known for innovation,
               reliability and transforming property ownership experiences.
             </p>
           </div>
 
           <div>
-            <h2 className="text-2xl font-bold text-yellow-500 mb-2">
+            <h2 className="text-2xl font-bold text-yellow-500">
               Our Mission
             </h2>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-gray-300 text-2xl leading-relaxed">
               To provide secure, transparent and high-value property
               investments while delivering exceptional service that builds
               lasting relationships with our clients.
