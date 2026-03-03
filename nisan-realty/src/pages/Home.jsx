@@ -243,7 +243,7 @@ export default function Home() {
             }
             className="mt-8 bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition"
           >
-            Explore Apartments
+            Explore Our Apartments
           </button>
         </div>
       </section>
