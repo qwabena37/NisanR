@@ -35,7 +35,7 @@ export default function Location() {
   return (
     <section className="min-h-screen bg-gray-950 text-white py-16 px-6">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-yellow-500 mb-12 text-center">
+        <h2 className="text-4xl font-bold text-yellow-500 mt-10 mb-12 text-center">
           Our Locations
         </h2>
 
