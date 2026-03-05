@@ -73,7 +73,7 @@ export default function Navbar() {
             <FaBuilding />
             Nisan
             <span className={scrolled ? "text-gray-800" : "text-white"}>
-              Realty
+            Realty
             </span>
           </NavLink>
 
@@ -133,7 +133,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Links */}
-          <ul className="hidden md:flex gap-8 font-medium">
+          <ul className="hidden md:flex gap-8 font-medium whitespace-nowrap">
             <NavLink to="/" className={linkClass}>
               Home
             </NavLink>

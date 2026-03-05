@@ -59,8 +59,8 @@ export default function Gallery() {
   ];
 
   return (
-    <section className="min-h-screen mt-10 bg-gray-950 text-white py-16 px-6">
-      <h2 className="text-4xl font-bold text-yellow-500 mb-12 text-center">
+    <section className="min-h-screen bg-gray-950 text-white py-16 px-6">
+      <h2 className="text-4xl font-bold mt-9 text-yellow-500 mb-12 text-center">
         Property Gallery
       </h2>
 

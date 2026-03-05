@@ -23,6 +23,7 @@ export default function Contact() {
         animate="visible"
         variants={fadeUp}
         custom={0}
+        
         className="text-center mb-16"
       >
         <h1 className="text-4xl mt-10 font-bold text-yellow-500 mb-6">
