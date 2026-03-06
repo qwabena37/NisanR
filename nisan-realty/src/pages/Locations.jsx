@@ -36,10 +36,10 @@ export default function Location() {
     <section className="min-h-screen bg-gray-950 text-white overflow-hidden">
 
       {/* Hero Header */}
-      <div className="relative h-[500px] flex items-center justify-center">
+      <div className="relative h-[500px] flex items-center justify-center"> 
 
         <img
-          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
+          src="./src/assets/location.png"
           alt="Location Background"
           className="absolute inset-0 w-full h-full object-cover opacity-70"
         />
