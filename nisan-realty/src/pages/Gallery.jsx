@@ -62,26 +62,26 @@ export default function Gallery() {
     <section className="min-h-screen bg-gray-950 text-white overflow-hidden">
 
       {/* Header Section */}
-      <div className="relative h-[600px] flex items-center justify-center px-6">
+<div className="relative h-[600px] flex items-center justify-center px-6 overflow-hidden">
 
-        {/* Background Image */}
-        <img
-          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
-          alt="Background"
-          className="absolute inset-0 w-full h-full object-cover opacity-70"
-        />
+  {/* Background Image with fade-in */}
+  <img
+    src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
+    alt="Background"
+    className="absolute inset-0 w-full h-full object-cover opacity-70 filter brightness-50 animate-fade-in-slow"
+  />
 
-        {/* Header Content */}
-        <div className="relative text-center max-w-3xl mx-auto">
-          <h2 className="text-4xl font-bold text-white mb-3">
-            Properties Gallery
-          </h2>
+  {/* Header Content */}
+  <div className="relative text-center max-w-3xl mx-auto animate-slide-up">
+    <h2 className="text-4xl font-bold text-white mb-3">
+      Properties Gallery
+    </h2>
 
-          {/* Yellow underline */}
-          <div className="w-24 h-1 bg-yellow-500 mx-auto rounded"></div>
-        </div>
+    {/* Yellow underline with pulse */}
+    <div className="w-24 h-1 bg-yellow-500 mx-auto rounded animate-pulse"></div>
+  </div>
 
-      </div>
+</div>
 
       {/* Gallery Grid */}
       <div className="py-16 px-6 max-w-7xl mx-auto">

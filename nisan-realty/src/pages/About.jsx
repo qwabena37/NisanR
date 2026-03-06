@@ -32,7 +32,7 @@ export default function About() {
       {/* Hero Section */}
       <section className="relative w-full h-[350px] md:h-[500px] lg:h-[600px] overflow-hidden">
   <motion.img
-    src="/src/assets/who.png"
+    src="./images/who.png"
     alt="Nisan Realty Building"
     className="absolute inset-0 w-full h-full object-cover"
     initial={{ scale: 1.1 }}

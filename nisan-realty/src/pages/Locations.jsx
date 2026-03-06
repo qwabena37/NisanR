@@ -36,27 +36,28 @@ export default function Location() {
     <section className="min-h-screen bg-gray-950 text-white overflow-hidden">
 
       {/* Hero Header */}
-      <div className="relative h-[500px] flex items-center justify-center"> 
+      <div className="relative h-[500px] flex items-center justify-center overflow-hidden"> 
+  {/* Background Image with reduced brightness */}
+  <img
+    src="./images/location.png"
+    alt="Location Background"
+    className="absolute inset-0 w-full h-full object-cover opacity-70 filter brightness-50 animate-fade-in-slow"
+  />
 
-        <img
-          src="./src/assets/location.png"
-          alt="Location Background"
-          className="absolute inset-0 w-full h-full object-cover opacity-70"
-        />
+  {/* Content */}
+  <div className="relative text-center px-6 animate-slide-up">
+    <h2 className="text-4xl md:text-5xl font-bold text-white mb-3">
+      Our Locations
+    </h2>
 
-        <div className="relative text-center px-6">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-3">
-            Our Locations
-          </h2>
+    <div className="w-24 h-1 bg-yellow-500 mx-auto rounded mb-6 animate-pulse"></div>
 
-          <div className="w-24 h-1 bg-yellow-500 mx-auto rounded mb-6"></div>
-
-          <p className="max-w-xl mx-auto text-gray-200">
-            Explore prime real estate locations where we offer premium homes,
-            land investments and luxury living opportunities.
-          </p>
-        </div>
-      </div>
+    <p className="max-w-xl mx-auto text-gray-200">
+      Explore prime real estate locations where we offer premium homes,
+      land investments and luxury living opportunities.
+    </p>
+  </div>
+</div>
 
       {/* Locations Grid */}
       <div className="max-w-7xl mx-auto py-20 px-6">

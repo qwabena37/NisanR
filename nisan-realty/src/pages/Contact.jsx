@@ -22,7 +22,7 @@ export default function Contact() {
 
         {/* Background Image */}
         <img
-          src="./src/assets/call.jpg"
+          src="./images/call.jpg"
           alt="Woman on phone call"
           className="absolute inset-0 w-full h-full object-cover opacity-70"
         />
