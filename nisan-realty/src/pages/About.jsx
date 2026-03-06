@@ -30,15 +30,15 @@ export default function About() {
     <div className="bg-gray-900 text-white">
 
       {/* Hero Section */}
-      <section className="relative w-full h-64 md:h-80 overflow-hidden">
-        <motion.img
-          src="./properties/apartments/2.PNG"
-          alt="Nisan Realty Building"
-          className="absolute inset-0 w-full h-full object-cover"
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 6 }}
-        />
+      <section className="relative w-full h-[350px] md:h-[500px] lg:h-[600px] overflow-hidden">
+  <motion.img
+    src="./properties/apartments/2.PNG"
+    alt="Nisan Realty Building"
+    className="absolute inset-0 w-full h-full object-cover"
+    initial={{ scale: 1.1 }}
+    animate={{ scale: 1 }}
+    transition={{ duration: 6 }}
+  />
 
         <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
           <motion.h1

@@ -59,45 +59,68 @@ export default function Gallery() {
   ];
 
   return (
-    <section className="min-h-screen bg-gray-950 text-white py-16 px-6">
-      <h2 className="text-4xl font-bold mt-9 text-yellow-500 mb-12 text-center">
-        Property Gallery
-      </h2>
+    <section className="min-h-screen bg-gray-950 text-white overflow-hidden">
 
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {properties.map((property, index) => (
-          <div
-            key={index}
-            className="relative group overflow-hidden rounded-xl shadow-lg bg-gray-900"
-          >
-            <img
-              src={property.image}
-              alt={property.title}
-              className="w-full h-60 object-cover transform group-hover:scale-110 transition duration-500"
-            />
+      {/* Header Section */}
+      <div className="relative h-[600px] flex items-center justify-center px-6">
 
-            {/* Caption Section */}
-            <div className="p-4">
-              <h3 className="text-lg font-semibold text-yellow-400">
-                {property.title}
-              </h3>
-              <p className="text-sm text-gray-300 mt-1">
-                {property.description}
-              </p>
-            </div>
+        {/* Background Image */}
+        <img
+          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
+          alt="Background"
+          className="absolute inset-0 w-full h-full object-cover opacity-70"
+        />
 
-            {/* Hover Overlay */}
-            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
-              <Link
-                to={property.link}
-                className="bg-yellow-500 text-black px-4 py-2 rounded-lg font-semibold hover:bg-yellow-400 transition"
-              >
-                See more about this property
-              </Link>
-            </div>
-          </div>
-        ))}
+        {/* Header Content */}
+        <div className="relative text-center max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-white mb-3">
+            Properties Gallery
+          </h2>
+
+          {/* Yellow underline */}
+          <div className="w-24 h-1 bg-yellow-500 mx-auto rounded"></div>
+        </div>
+
       </div>
+
+      {/* Gallery Grid */}
+      <div className="py-16 px-6 max-w-7xl mx-auto">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {properties.map((property, index) => (
+            <div
+              key={index}
+              className="relative group overflow-hidden rounded-xl shadow-lg bg-gray-900"
+            >
+              <img
+                src={property.image}
+                alt={property.title}
+                className="w-full h-60 object-cover transform group-hover:scale-110 transition duration-500"
+              />
+
+              {/* Caption */}
+              <div className="p-4">
+                <h3 className="text-lg font-semibold text-yellow-400">
+                  {property.title}
+                </h3>
+                <p className="text-sm text-gray-300 mt-1">
+                  {property.description}
+                </p>
+              </div>
+
+              {/* Hover Overlay */}
+              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
+                <Link
+                  to={property.link}
+                  className="bg-yellow-500 text-black px-4 py-2 rounded-lg font-semibold hover:bg-yellow-400 transition"
+                >
+                  See more about this property
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
     </section>
   );
 }

@@ -15,28 +15,42 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-950 text-white py-16 px-6 overflow-hidden">
+    <div className="min-h-screen bg-gray-950 text-white overflow-hidden">
 
-      {/* Page Header */}
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={fadeUp}
-        custom={0}
-        
-        className="text-center mb-16"
-      >
-        <h1 className="text-4xl mt-10 font-bold text-yellow-500 mb-6">
-          Contact Us
-        </h1>
-        <p className="text-yellow-400 max-w-2xl mx-auto">
-          We’d love to help you find your dream home and secure prime land investments.
-          Reach out to us anytime — we are here to serve you.
-        </p>
-      </motion.div>
+      {/* Page Header with Background Image */}
+      <div className="relative h-[600px] flex items-center justify-center px-6">
+
+        {/* Background Image */}
+        <img
+          src="./src/assets/call.jpg"
+          alt="Woman on phone call"
+          className="absolute inset-0 w-full h-full object-cover opacity-70"
+        />
+
+        {/* Header Content */}
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp}
+          custom={0}
+          className="relative text-center max-w-3xl mx-auto"
+        >
+          <h1 className="text-4xl mt-10 font-bold text-white mb-3">
+            Contact Us
+          </h1>
+
+          {/* Yellow underline */}
+          <div className="w-24 h-1 bg-yellow-500 mx-auto rounded mb-6"></div>
+
+          <p className="text-white">
+            We’d love to help you find your dream home and secure prime land investments.
+            Reach out to us anytime — we are here to serve you.
+          </p>
+        </motion.div>
+      </div>
 
       {/* Contact Content */}
-      <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+      <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto py-16 px-6">
 
         {/* Contact Information */}
         <motion.div
@@ -131,6 +145,7 @@ export default function Contact() {
             </button>
           </form>
         </motion.div>
+
       </div>
     </div>
   );
