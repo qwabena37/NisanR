@@ -139,12 +139,43 @@ ${isActive ? "after:w-full text-yellow-500 font-semibold" : ""}`
             })}
 
             {/* Social Icons */}
-            <div className="flex justify-center gap-6 pt-4 border-t">
-              <FaTiktok />
-              <FaFacebookF />
-              <FaInstagram />
-              <FaYoutube />
-            </div>
+<div className="flex justify-center gap-6 pt-4 border-t text-lg">
+  <a
+    href="https://www.tiktok.com/@nisanrealty123?_r=1&_t=ZS-93pj6cgN2n7/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-black transition"
+  >
+    <FaTiktok />
+  </a>
+
+  <a
+    href="https://www.facebook.com/share/1H3wWbyGWz/?mibextid=wwXIfr/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-blue-500 transition"
+  >
+    <FaFacebookF />
+  </a>
+
+  <a
+    href="https://www.instagram.com/nisan.realty123?igsh=MTAzc2V3MGhoOWR2Mg==/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-pink-500 transition"
+  >
+    <FaInstagram />
+  </a>
+
+  <a
+    href="https://youtube.com/@nisan_realty?si=0Al1n6l-MNxRdjbw/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-red-500 transition"
+  >
+    <FaYoutube />
+  </a>
+</div>
           </div>
         )}
       </nav>

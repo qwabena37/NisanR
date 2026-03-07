@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function Home() {
   const [selectedProperty, setSelectedProperty] = useState(null);
   const [openContact, setOpenContact] = useState(null);
+  
 
   const propertiesData = [
     // (your propertiesData unchanged)
@@ -214,18 +215,19 @@ export default function Home() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="relative w-full h-screen overflow-hidden"
+        className="relative w-full h-[70vh] md:h-screen overflow-hidden"
       >
 
         <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute w-full h-full object-cover"
-        >
-          <source src="/videos/promo-vid.mp4" type="video/mp4" />
-        </video>
+  autoPlay
+  loop
+  muted
+  playsInline
+  preload="auto"
+  className="absolute top-0 left-0 w-full h-full object-cover"
+>
+  <source src="/videos/promo-vid.mp4" type="video/mp4" />
+</video>
 
         <div className="absolute inset-0 bg-black/50"></div>
 
