@@ -1,15 +1,14 @@
 ﻿import { useState } from "react";
-import { FaPhoneAlt, FaWhatsapp, FaEnvelope } from "react-icons/fa";
+import { FaPhoneAlt, FaWhatsapp, FaEnvelope, FaLightbulb } from "react-icons/fa";
+import { MdConstruction } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Home() {
   const [selectedProperty, setSelectedProperty] = useState(null);
   const [openContact, setOpenContact] = useState(null);
-  
 
   const propertiesData = [
-    // (your propertiesData unchanged)
-    {
+     {
       id: 1,
       title: "Exquisite 5.5 Bedroom Luxury Home",
       location: "Lakeside",
@@ -136,23 +135,15 @@ export default function Home() {
 
   const cardVariants = {
     hidden: { opacity: 0, y: 40 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
-    }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
 
   const renderSection = (title, category, sectionId) => {
-    const filtered = propertiesData.filter(
-      (property) => property.category === category
-    );
-
+    const filtered = propertiesData.filter((property) => property.category === category);
     if (!filtered.length) return null;
 
     return (
       <section id={sectionId} className="max-w-7xl mx-auto px-6 py-20">
-
         <motion.h2
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -165,34 +156,23 @@ export default function Home() {
         <div className="grid md:grid-cols-3 gap-10">
           {filtered.map((property) => (
             <motion.div
+              key={property.id}
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              key={property.id}
               className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300"
             >
-              <img
-                src={property.image}
-                alt={property.title}
-                className="h-60 w-full object-cover"
-              />
+              <img src={property.image} alt={property.title} className="h-60 w-full object-cover" />
 
               <div className="p-6">
-                <h3 className="text-lg font-semibold text-slate-900">
-                  {property.title}
-                </h3>
-
-                <p className="text-slate-500 mt-2 text-sm">
-                  {property.location}
-                </p>
-
+                <h3 className="text-lg font-semibold text-slate-900">{property.title}</h3>
+                <p className="text-slate-500 mt-2 text-sm">{property.location}</p>
                 <p className="mt-4 text-lg font-bold text-amber-600">
                   {property.listingType === "sale"
                     ? `GHS ${property.price.toLocaleString()}`
                     : `GHS ${property.price.toLocaleString()} / month`}
                 </p>
-
                 <button
                   onClick={() => setSelectedProperty(property)}
                   className="mt-6 w-full bg-amber-600 text-white py-2.5 rounded-lg font-medium hover:bg-amber-700 transition"
@@ -217,30 +197,88 @@ export default function Home() {
         transition={{ duration: 1 }}
         className="relative w-full h-[70vh] md:h-screen overflow-hidden"
       >
-
+        {/* Video */}
         <video
-  autoPlay
-  loop
-  muted
-  playsInline
-  preload="auto"
-  className="absolute top-0 left-0 w-full h-full object-cover"
->
-  <source src="/videos/promo-vid.mp4" type="video/mp4" />
-</video>
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          className="absolute top-0 left-0 w-full h-full object-cover"
+        >
+          <source src="/videos/promo-vid.mp4" type="video/mp4" />
+        </video>
 
+        {/* Overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
 
-        {/* FLOATING CONTACT ICONS */}
-        <div className="absolute right-6 top-1/2 -translate-y-1/2 flex flex-col gap-4 z-20">
+ {/* NS & NC Buttons on bottom-left */}
+<div className="absolute left-6 bottom-6 flex flex-col gap-3 md:gap-4 z-20">
 
+  {/* NC */}
+  <div className="relative group w-fit">
+    <motion.a
+      whileHover={{ scale: 1.1 }}
+      animate={{ y: [0, -6, 0] }}
+      transition={{ repeat: Infinity, duration: 3 }}
+      href="https://nisanconstructions.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-1 md:gap-2 
+      text-sm md:text-base 
+      text-white hover:text-yellow-500 transition font-medium"
+    >
+      <MdConstruction className="text-lg md:text-xl" /> Nisan Constructions
+    </motion.a>
+
+    <div className="absolute left-full top-1/2 -translate-y-1/2 ml-3 w-56 bg-white shadow-lg rounded-lg p-3 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-300 z-50">
+      <p className="font-semibold text-gray-800 flex items-center gap-2">
+        <MdConstruction /> Nisan Constructions
+      </p>
+
+      <p className="text-gray-500 text-sm mt-1">
+        Premium building and construction services delivering high-quality structures.
+      </p>
+    </div>
+  </div>
+
+  {/* NS */}
+  <div className="relative group w-fit">
+    <motion.a
+      whileHover={{ scale: 1.1 }}
+      animate={{ y: [0, -6, 0] }}
+      transition={{ repeat: Infinity, duration: 3, delay: 0.5 }}
+      href="https://nisansolutions.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-1 md:gap-2 
+      text-sm md:text-base 
+      text-white hover:text-yellow-500 transition font-medium"
+    >
+      <FaLightbulb className="text-lg md:text-xl" /> Nisan Solutions
+    </motion.a>
+
+    <div className="absolute left-full top-1/2 -translate-y-1/2 ml-3 w-56 bg-white shadow-lg rounded-lg p-3 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-300 z-50">
+      <p className="font-semibold text-gray-800 flex items-center gap-2">
+        <FaLightbulb /> Nisan Solutions
+      </p>
+
+      <p className="text-gray-500 text-sm mt-1">
+        Business solutions and consultancy services tailored for your success.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+        {/* Floating Contact Icons on right */}
+        <div className="absolute right-6 top-1/2 -translate-y-1/2 flex flex-col gap-4 z-20">
           {[
             { type: "phone", icon: <FaPhoneAlt />, color: "bg-yellow-600", text: "+233 123 456 789" },
             { type: "whatsapp", icon: <FaWhatsapp />, color: "bg-green-500", text: "+233 123 456 789" },
-            { type: "email", icon: <FaEnvelope />, color: "bg-slate-800", text: "info@nisanrealty.com" }
+            { type: "email", icon: <FaEnvelope />, color: "bg-slate-800", text: "info@nisanrealty.com" },
           ].map((item) => (
             <div key={item.type} className="relative flex items-center">
-
               {openContact === item.type && (
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
@@ -250,24 +288,18 @@ export default function Home() {
                   {item.text}
                 </motion.div>
               )}
-
               <motion.button
                 whileHover={{ scale: 1.15 }}
                 animate={{ y: [0, -8, 0] }}
                 transition={{ repeat: Infinity, duration: 3 }}
-                onClick={() =>
-                  setOpenContact(openContact === item.type ? null : item.type)
-                }
+                onClick={() => setOpenContact(openContact === item.type ? null : item.type)}
                 className={`${item.color} text-white p-4 rounded-full shadow-lg`}
               >
                 {item.icon}
               </motion.button>
-
             </div>
           ))}
-
         </div>
-
       </motion.section>
 
       {/* HERO TEXT */}
@@ -277,7 +309,6 @@ export default function Home() {
         transition={{ duration: 0.8 }}
         className="bg-white text-center py-20 px-6"
       >
-
         <h1 className="font-semibold text-4xl md:text-5xl text-slate-900">
           Luxury Living | Land Sales | Resorts
         </h1>
@@ -302,7 +333,6 @@ export default function Home() {
         >
           Explore Our Apartments
         </button>
-
       </motion.div>
 
       {/* PROPERTY SECTIONS */}
@@ -319,30 +349,22 @@ export default function Home() {
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/60 flex items-center justify-center px-4 z-50"
           >
-
             <motion.div
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
               className="bg-white max-w-lg w-full rounded-xl overflow-hidden shadow-2xl"
             >
-
               <img
                 src={selectedProperty.image}
                 alt={selectedProperty.title}
                 className="h-64 w-full object-cover"
               />
-
               <div className="p-6">
-
                 <h2 className="text-2xl font-semibold text-slate-900">
                   {selectedProperty.title}
                 </h2>
-
-                <p className="mt-4 text-slate-600">
-                  {selectedProperty.description}
-                </p>
-
+                <p className="mt-4 text-slate-600">{selectedProperty.description}</p>
                 <a
                   href={selectedProperty.url}
                   target="_blank"
@@ -351,22 +373,17 @@ export default function Home() {
                 >
                   View Full Property Page
                 </a>
-
                 <button
                   onClick={() => setSelectedProperty(null)}
                   className="mt-4 w-full bg-slate-800 text-white py-2.5 rounded-lg hover:bg-slate-900 transition"
                 >
                   Close
                 </button>
-
               </div>
-
             </motion.div>
-
           </motion.div>
         )}
       </AnimatePresence>
-
     </div>
   );
 }
