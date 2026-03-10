@@ -195,7 +195,7 @@ export default function Home() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="relative w-full h-[70vh] md:h-screen overflow-hidden"
+        className="relative w-full h-[80vh] md:h-screen overflow-hidden"
       >
         {/* Video */}
         <video
@@ -213,7 +213,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/50"></div>
 
  {/* NS & NC Buttons on bottom-left */}
-<div className="absolute left-6 bottom-6 flex flex-col gap-3 md:gap-4 z-20">
+<div className="absolute left-6 bottom-11 flex flex-col gap-3 md:gap-4 z-20">
 
   {/* NC */}
   <div className="relative group w-fit">
@@ -221,7 +221,7 @@ export default function Home() {
       whileHover={{ scale: 1.1 }}
       animate={{ y: [0, -6, 0] }}
       transition={{ repeat: Infinity, duration: 3 }}
-      href="https://nisanconstructions.com"
+      href="https://nisa-nc.vercel.app/"
       target="_blank"
       rel="noopener noreferrer"
       className="flex items-center gap-1 md:gap-2 
