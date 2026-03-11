@@ -1,5 +1,5 @@
 ﻿import { useState } from "react";
-import { FaPhoneAlt, FaWhatsapp, FaEnvelope, FaLightbulb } from "react-icons/fa";
+import { FaPhoneAlt, FaWhatsapp, FaEnvelope, FaRobot } from "react-icons/fa";
 import { MdConstruction } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -19,7 +19,7 @@ export default function Home() {
       image: "./properties/apartments/1.PNG",
       description:
         "Luxury 5.5 bedroom home with cinema, swimming pool, study space, laundry and standby generator.",
-      url: "https://www.tiktok.com/@nisanrealty123/video/7552468302652575032?is_from_webapp=1&sender_device=pc&web_id=7606334219082810888",
+      url: "https://www.instagram.com/p/DOxC29XCBDA/",
     },
     {
       id: 2,
@@ -32,7 +32,7 @@ export default function Home() {
       image: "./properties/apartments/2.PNG",
       description:
         "Ultra-modern townhouse with smart technology, swimming pool and security post.",
-      url: "https://www.tiktok.com/@nisanrealty123/video/7549157944466656517?is_from_webapp=1&sender_device=pc&web_id=7606334219082810888",
+      url: "https://www.instagram.com/p/DOwzs9PjOqX/",
     },
     {
       id: 3,
@@ -45,7 +45,7 @@ export default function Home() {
       image: "./properties/apartments/3.PNG",
       description:
         "A Newly Built 4-Bedrooms Home For Sale.",
-      url: "https://www.tiktok.com/@nisanrealty123/video/7598969146390351116?is_from_webapp=1&sender_device=pc&web_id=7606334219082810888",
+      url: "https://www.instagram.com/p/DAlCiGaq417/",
     },
     {
       id: 4,
@@ -59,7 +59,7 @@ export default function Home() {
         "./properties/lands/l1.PNG",
       description:
         "Titled land suitable for residential or investment purposes.",
-      url: "https://www.tiktok.com/@nisanrealty123/video/7595251612105461004?is_from_webapp=1&sender_device=pc&web_id=7606334219082810888",
+      url: "https://www.instagram.com/p/DTOA6xJjLIF/",
     },
     {
       id: 5,
@@ -73,7 +73,7 @@ export default function Home() {
         "./properties/lands/l2.PNG",
       description:
         "Well-documented land with strong appreciation potential.",
-      url: "https://www.tiktok.com/@nisanrealty123/video/7594403299365850424?is_from_webapp=1&sender_device=pc&web_id=7606334219082810888",
+      url: "https://www.instagram.com/p/DTU0jqpDDYW/",
     },
     {
       id: 6,
@@ -87,7 +87,7 @@ export default function Home() {
         "./properties/lands/l3.PNG",
       description:
         "Titled and documented land for close to the Weija Lagoon.",
-      url: "https://www.tiktok.com/@nisanrealty123/video/7594403236300229900?is_from_webapp=1&sender_device=pc&web_id=7606334219082810888",
+      url: "https://www.instagram.com/p/DTU1UzHDIqu/",
     },
     {
       id: 7,
@@ -101,7 +101,7 @@ export default function Home() {
         "./properties/resorts/r1.PNG",
       description:
         "A tranquil, private beachfront haven located on the Central Regionâ€™s coast in Nyanyanor Village, approximately 52km (a one-hour drive) from Accra. This exclusive resort is nestled amidst lush greenery and coconut trees, overlooking the Atlantic Ocean. It features modern architecture with stone-walled courtyards and separate villas, each offering spacious indoor and outdoor living areas for optimum comfort",
-      url: "https://www.tiktok.com/@nisanrealty123/video/7544508590099369272?is_from_webapp=1&sender_device=pc&web_id=7606334219082810888",
+      url: "https://www.instagram.com/p/DN_ttSOjKzL/",
     },
     {
       id: 8,
@@ -115,7 +115,7 @@ export default function Home() {
         "./properties/resorts/r2.PNG",
       description:
         "Manko view beach resort is one of the most aesthetic resort in Ghana. Itâ€™s quiet, serene, and relaxing. Itâ€™s time to bag your bags.",
-      url: "https://www.tiktok.com/@nisanrealty123/video/7545044795949960453?is_from_webapp=1&sender_device=pc&web_id=7606334219082810888",
+      url: "https://www.instagram.com/p/DODbIK3jE5u/",
     },
     {
       id: 9,
@@ -129,7 +129,7 @@ export default function Home() {
         "./properties/resorts/r3.PNG",
       description:
         "This resort situated in the heart of the Central Region of Ghana, Gomoa Nsuaem.",
-      url: "https://www.tiktok.com/@nisanrealty123/video/7546142699087318278?is_from_webapp=1&sender_device=pc&web_id=7606334219082810888",
+      url: "https://www.instagram.com/p/DOG548_DMft/",
     },
   ];
 
@@ -248,19 +248,19 @@ export default function Home() {
       whileHover={{ scale: 1.1 }}
       animate={{ y: [0, -6, 0] }}
       transition={{ repeat: Infinity, duration: 3, delay: 0.5 }}
-      href="https://nisansolutions.com"
+      href="https://nisa-ns.vercel.app/"
       target="_blank"
       rel="noopener noreferrer"
       className="flex items-center gap-1 md:gap-2 
       text-sm md:text-base 
       text-white hover:text-yellow-500 transition font-medium"
     >
-      <FaLightbulb className="text-lg md:text-xl" /> Nisan Solutions
+      <FaRobot className="text-lg md:text-xl" /> Nisan Solutions
     </motion.a>
 
     <div className="absolute left-full top-1/2 -translate-y-1/2 ml-3 w-56 bg-white shadow-lg rounded-lg p-3 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-300 z-50">
       <p className="font-semibold text-gray-800 flex items-center gap-2">
-        <FaLightbulb /> Nisan Solutions
+        <FaRobot /> Nisan Solutions
       </p>
 
       <p className="text-gray-500 text-sm mt-1">
