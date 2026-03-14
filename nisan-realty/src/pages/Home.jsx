@@ -274,34 +274,44 @@ export default function Home() {
 </div>
 
         {/* Floating Contact Icons on right */}
-        <div className="absolute right-6 top-1/2 -translate-y-1/2 flex flex-col gap-4 z-20">
-          {[
-            { type: "phone", icon: <FaPhoneAlt />, color: "bg-yellow-600", text: "+233 123 456 789" },
-            { type: "whatsapp", icon: <FaWhatsapp />, color: "bg-green-500", text: "+233 123 456 789" },
-            { type: "email", icon: <FaEnvelope />, color: "bg-slate-800", text: "info@nisanrealty.com" },
-          ].map((item) => (
-            <div key={item.type} className="relative flex items-center">
-              {openContact === item.type && (
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  className="absolute right-14 bg-white text-slate-900 px-4 py-2 rounded-lg shadow-lg text-sm whitespace-nowrap"
-                >
-                  {item.text}
-                </motion.div>
-              )}
-              <motion.button
-                whileHover={{ scale: 1.15 }}
-                animate={{ y: [0, -8, 0] }}
-                transition={{ repeat: Infinity, duration: 3 }}
-                onClick={() => setOpenContact(openContact === item.type ? null : item.type)}
-                className={`${item.color} text-white p-4 rounded-full shadow-lg`}
-              >
-                {item.icon}
-              </motion.button>
-            </div>
-          ))}
-        </div>
+<div className="absolute right-6 top-1/2 -translate-y-1/2 flex flex-col gap-4 z-20">
+  {[
+    {
+      type: "phone",
+      icon: <FaPhoneAlt />,
+      color: "bg-yellow-600",
+      link: "tel:+233123456789",
+    },
+    {
+      type: "whatsapp",
+      icon: <FaWhatsapp />,
+      color: "bg-green-500",
+      link: "https://wa.me/233123456789",
+    },
+    {
+      type: "email",
+      icon: <FaEnvelope />,
+      color: "bg-slate-800",
+      link: "mailto:info@nisanrealty.com",
+    },
+  ].map((item) => (
+    <a
+      key={item.type}
+      href={item.link}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <motion.button
+        whileHover={{ scale: 1.15 }}
+        animate={{ y: [0, -8, 0] }}
+        transition={{ repeat: Infinity, duration: 3 }}
+        className={`${item.color} text-white p-4 rounded-full shadow-lg`}
+      >
+        {item.icon}
+      </motion.button>
+    </a>
+  ))}
+</div>
       </motion.section>
 
       {/* HERO TEXT */}
